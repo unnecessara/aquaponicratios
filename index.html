@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Open+Sans:300|Righteous" rel="stylesheet">
+
+    <title>Aquaponic Ratios</title>
+
+    <style>
+        body {
+            padding-top: 80px;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #33595E;
+        }
+
+        #title {
+            font-size: 32px;
+            font-family: 'Righteous', cursive;
+            color: #F4F6F1;
+        }
+
+        .card {
+            background-color: #F4F6F1;
+            color: #33595E;
+        }
+
+        .card i {
+            color: #99bab3;
+        }
+
+        .card .tooltip-icon {
+            color: #9E6074;
+            position: absolute;
+            left: -9px;
+            top: -9px;
+            z-index: 3;
+        }
+
+        .input-group-text {
+            background-color: #99bab3;
+            font-weight: bold;
+        }
+
+        .ratio-title {
+            line-height: 36px;
+        }
+
+        .colon { 
+            font-size: 22px;
+            line-height: 34px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <nav class="navbar fixed-top navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Aquaponic Ratios</a>
+
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Metric
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> Imperial
+                    </label>
+                </div>
+            </div>
+        </nav> -->
+
+        <div id="title" class="mb-4 text-center">Aquaponic Ratios</div>
+        <div id="system" class="mb-2 text-right">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-sm btn-secondary active">
+                    <input type="radio" name="options" id="option1" data-system="metric" autocomplete="off" checked> Metric
+                </label>
+                <label class="btn btn-sm btn-secondary">
+                    <input type="radio" name="options" id="option2" data-system="imperial" autocomplete="off"> Imperial
+                </label>
+            </div>
+        </div>
+        
+        <!-- Weight / Area -->
+        <div class="card mb-4 ratio" data-ratio="1.0">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col text-right ratio-title">
+                        <i class="fa fa-fish mr-1"></i>
+                        Fish Weight
+                    </div>
+                    <div class="col input-left">
+                        <div class="input-group">
+                            <input type="number" class="form-control" name="fish-weight" value="1">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-system="imperial">lb</button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item unit-option" href="#" data-unit="imperial">lb</a>
+                                    <a class="dropdown-item unit-option" href="#" data-unit="metric">kg</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="colon">:</div>
+                    <div class="col input-right">
+                        <div class="input-group">
+                            <input type="number" class="form-control" name="tank-area" value="1">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-system="imperial">ft&sup2;</button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item unit-option" href="#" data-unit="imperial">ft&sup2;</a>
+                                    <a class="dropdown-item unit-option" href="#" data-unit="metric">m&sup2;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col ratio-title">
+                        Tank Area 
+                        <i class="fa fa-ruler-combined ml-1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Weight / Volume -->
+        <div class="card mb-4 ratio" data-ratio="7.5">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col text-right ratio-title">
+                        <i class="fa fa-fish mr-1"></i>
+                        Fish Weight
+                    </div>
+                    <div class="col input-left">
+                        <div class="input-group">
+                            <input type="number" class="form-control" name="fish-weight" value="1">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-system="imperial">lb</button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item unit-option" href="#" data-unit="imperial">lb</a>
+                                    <a class="dropdown-item unit-option" href="#" data-unit="metric">kg</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="colon">:</div>
+                    <div class="col input-right">
+                        <div class="input-group">
+                            <input type="number" class="form-control" name="tank-area" value="7.5">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-system="imperial">gal</button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item unit-option" href="#" data-unit="imperial">gal</a>
+                                    <a class="dropdown-item unit-option" href="#" data-unit="metric">L</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col ratio-title">
+                        Tank Volume
+                        <i class="fa fa-cube ml-1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bed / Tank -->
+        <div class="card mb-4 ratio" data-ratio="1">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col text-right ratio-title">
+                        <i class="fa fa-inbox mr-1"></i>
+                        Grow Bed Volume
+                    </div>
+                    <div class="col input-left">
+                        <div class="input-group">
+                            <input type="number" class="form-control" name="fish-weight" value="1">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-system="imperial">gal</button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item unit-option" href="#" data-unit="imperial">gal</a>
+                                    <a class="dropdown-item unit-option" href="#" data-unit="metric">L</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="colon">:</div>
+                    <div class="col input-right">
+                        <div class="input-group">
+                            <input type="number" class="form-control" name="tank-area" value="1">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-system="imperial">gal</button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item unit-option" href="#" data-unit="imperial">gal</a>
+                                    <a class="dropdown-item unit-option" href="#" data-unit="metric">L</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col ratio-title">
+                        Tank Volume
+                        <i class="fa fa-cube ml-1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ammonium / Tank -->
+        <div class="card mb-4 ratio" data-ratio="0.25">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col text-right ratio-title">
+                        <i class="fa fa-eye-dropper mr-1"></i>
+                        Ammonium Chloride
+                    </div>
+                    <div class="col input-left">
+                        <div class="input-group">
+                            <i class="fa fa-info-circle tooltip-icon" title="To raise levels to 2ppm"></i>
+                            <input type="number" class="form-control" name="fish-weight" value="4">
+                            <div class="input-group-append">
+                                <div class="input-group-text">drops</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="colon">:</div>
+                    <div class="col input-right">
+                        <div class="input-group">
+                            <input type="number" class="form-control" name="tank-area" value="1">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-system="imperial">gal</button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item unit-option" href="#" data-unit="imperial">gal</a>
+                                    <a class="dropdown-item unit-option" href="#" data-unit="metric">L</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col ratio-title">
+                        Tank Volume
+                        <i class="fa fa-cube ml-1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v0.4.9/Source/jBox.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v0.4.9/Source/jBox.css" rel="stylesheet">
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('.unit-option').click(function (e) {
+                e.preventDefault();
+
+                var unit = $(this).data('unit');
+                var btn = $(this).parent('div').siblings('button');
+
+                // Update button UI
+                btn.data('system', unit).text($(this).text());
+
+                // Recalculate
+                calculateRatio(
+                    $(this).closest('.ratio'), 
+                    $(this).closest('.col').hasClass('input-left') ? 'right' : 'left'
+                );
+            });
+
+            $('input').keyup(function(e) {
+                calculateRatio(
+                    $(this).closest('.ratio'), 
+                    $(this).closest('.col').hasClass('input-left') ? 'right' : 'left'
+                );
+            });
+
+            function toImperial(unit, value) {
+                var result = parseFloat(value);
+
+                switch (unit) {
+                    case 'L': result = result / 3.79; break;
+                    case 'm&sup2;': result = result * 10.7639; break;
+                    case 'kg': result = result / 2.2; break;
+                }
+                
+                return result;
+            };
+
+            function toMetric(unit, value) {
+                var result = parseFloat(value);
+
+                switch (unit) {
+                    case 'gal': result = result * 3.79; break;
+                    case 'ft&sup2;': result = result / 10.7639; break;
+                    case 'lb': result = result * 2.2; break;
+                }
+
+                return result;
+            };
+
+            function calculateRatio(el, side) {
+                var ratio = parseFloat(el.data('ratio'));
+                var leftInput = getInputData(el.find('.input-left'));
+                var rightInput = getInputData(el.find('.input-right'));
+
+                if (side == 'right') {
+
+                    var result = toImperial(leftInput.unit, leftInput.value) * ratio;
+
+                    if (rightInput.system == 'metric') {
+                        result = toMetric(rightInput.unit, result);
+                    }
+                    
+                    rightInput.el.find('input').val(result);
+
+                } else {
+                    var result = toImperial(rightInput.unit, rightInput.value) / ratio;
+
+                    if (leftInput.system == 'metric') {
+                        result = toMetric(leftInput.unit, result);
+                    }
+
+                    leftInput.el.find('input').val(result);
+                }
+            };
+
+            function getInputData(el) {
+                return {
+                    el: el,
+                    value: el.find('input').val(),
+                    system: el.find('button').data('system'),
+                    unit: el.find('button').text()
+                };
+            };
+
+            new jBox('Tooltip', {
+                attach: '.tooltip-icon',
+                trigger: 'click'
+            });
+        });
+    </script>
+</body>
+</html>
