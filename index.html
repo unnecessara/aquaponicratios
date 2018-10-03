@@ -79,11 +79,11 @@
         <div id="title" class="mb-4 text-center">Aquaponic Ratios</div>
         <div id="system" class="mb-2 text-right">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-sm btn-secondary active">
-                    <input type="radio" name="options" id="option1" data-system="metric" autocomplete="off" checked> Metric
-                </label>
                 <label class="btn btn-sm btn-secondary">
-                    <input type="radio" name="options" id="option2" data-system="imperial" autocomplete="off"> Imperial
+                    <input type="radio" name="system" id="option1" data-system="metric" autocomplete="off"> Metric
+                </label>
+                <label class="btn btn-sm btn-secondary active">
+                    <input type="radio" name="system" id="option2" data-system="imperial" autocomplete="off" checked> Imperial
                 </label>
             </div>
         </div>
@@ -100,11 +100,7 @@
                         <div class="input-group">
                             <input type="number" class="form-control" name="fish-weight" value="1">
                             <div class="input-group-append">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-system="imperial">lb</button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item unit-option" href="#" data-unit="imperial">lb</a>
-                                    <a class="dropdown-item unit-option" href="#" data-unit="metric">kg</a>
-                                </div>
+                                <div class="input-group-text unit">lb</div>
                             </div>
                         </div>
                     </div>
@@ -113,11 +109,7 @@
                         <div class="input-group">
                             <input type="number" class="form-control" name="tank-area" value="1">
                             <div class="input-group-append">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-system="imperial">ft&sup2;</button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item unit-option" href="#" data-unit="imperial">ft&sup2;</a>
-                                    <a class="dropdown-item unit-option" href="#" data-unit="metric">m&sup2;</a>
-                                </div>
+                                <div class="input-group-text unit">ft&sup2;</div>
                             </div>
                         </div>
                     </div>
@@ -141,24 +133,16 @@
                         <div class="input-group">
                             <input type="number" class="form-control" name="fish-weight" value="1">
                             <div class="input-group-append">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-system="imperial">lb</button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item unit-option" href="#" data-unit="imperial">lb</a>
-                                    <a class="dropdown-item unit-option" href="#" data-unit="metric">kg</a>
-                                </div>
+                                <div class="input-group-text unit">lb</div>
                             </div>
                         </div>
                     </div>
                     <div class="colon">:</div>
                     <div class="col input-right">
                         <div class="input-group">
-                            <input type="number" class="form-control" name="tank-area" value="7.5">
+                            <input type="number" class="form-control" name="tank-volume" value="7.5">
                             <div class="input-group-append">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-system="imperial">gal</button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item unit-option" href="#" data-unit="imperial">gal</a>
-                                    <a class="dropdown-item unit-option" href="#" data-unit="metric">L</a>
-                                </div>
+                                <div class="input-group-text unit">gal</div>
                             </div>
                         </div>
                     </div>
@@ -180,26 +164,18 @@
                     </div>
                     <div class="col input-left">
                         <div class="input-group">
-                            <input type="number" class="form-control" name="fish-weight" value="1">
+                            <input type="number" class="form-control" name="bed-volume" value="1">
                             <div class="input-group-append">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-system="imperial">gal</button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item unit-option" href="#" data-unit="imperial">gal</a>
-                                    <a class="dropdown-item unit-option" href="#" data-unit="metric">L</a>
-                                </div>
+                                <div class="input-group-text unit">gal</div>
                             </div>
                         </div>
                     </div>
                     <div class="colon">:</div>
                     <div class="col input-right">
                         <div class="input-group">
-                            <input type="number" class="form-control" name="tank-area" value="1">
+                            <input type="number" class="form-control" name="tank-volume" value="1">
                             <div class="input-group-append">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-system="imperial">gal</button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item unit-option" href="#" data-unit="imperial">gal</a>
-                                    <a class="dropdown-item unit-option" href="#" data-unit="metric">L</a>
-                                </div>
+                                <div class="input-group-text unit">gal</div>
                             </div>
                         </div>
                     </div>
@@ -224,7 +200,7 @@
                             <i class="fa fa-info-circle tooltip-icon" title="To raise levels to 2ppm"></i>
                             <input type="number" class="form-control" name="fish-weight" value="4">
                             <div class="input-group-append">
-                                <div class="input-group-text">drops</div>
+                                <div class="input-group-text unit">drops</div>
                             </div>
                         </div>
                     </div>
@@ -233,11 +209,7 @@
                         <div class="input-group">
                             <input type="number" class="form-control" name="tank-area" value="1">
                             <div class="input-group-append">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-system="imperial">gal</button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item unit-option" href="#" data-unit="imperial">gal</a>
-                                    <a class="dropdown-item unit-option" href="#" data-unit="metric">L</a>
-                                </div>
+                                <div class="input-group-text unit">gal</div>
                             </div>
                         </div>
                     </div>
@@ -263,20 +235,37 @@
     <script type="text/javascript">
         $(document).ready(function () {
 
-            $('.unit-option').click(function (e) {
-                e.preventDefault();
+            $('input[type=radio][name=system]').change(function () {
+                var system = $(this).data('system');
+    
+                $('.input-group').each(function () {
+                    var inputField = $(this).children('input');
+                    var unitLabel = $(this).find('.unit');
+                    
+                    if (system === "metric") {
 
-                var unit = $(this).data('unit');
-                var btn = $(this).parent('div').siblings('button');
+                        var newValue = toMetric(unitLabel.text(), inputField.val());
+                        newValue - Math.floor(newValue) !== 0 ? newValue : newValue = Math.round(newValue);
+                        inputField.val(newValue);
 
-                // Update button UI
-                btn.data('system', unit).text($(this).text());
+                        switch (unitLabel.text()) {
+                            case 'gal': unitLabel.html('L'); break;
+                            case 'ft²':unitLabel.html('m&sup2;'); break;
+                            case 'lb': unitLabel.html('kg'); break;
+                        } 
+                    } else {
 
-                // Recalculate
-                calculateRatio(
-                    $(this).closest('.ratio'), 
-                    $(this).closest('.col').hasClass('input-left') ? 'right' : 'left'
-                );
+                        var newValue = toImperial(unitLabel.text(), inputField.val());
+                        newValue - Math.floor(newValue) !== 0 ? newValue : newValue = Math.round(newValue);
+                        inputField.val(newValue);
+                        
+                        switch (unitLabel.text()) {
+                            case 'L': unitLabel.html('gal'); break;
+                            case 'm²': unitLabel.html('ft&sup2;'); break;
+                            case 'kg': unitLabel.html('lb'); break;
+                        }
+                    }
+                });
             });
 
             $('input').keyup(function(e) {
@@ -291,8 +280,8 @@
 
                 switch (unit) {
                     case 'L': result = result / 3.79; break;
-                    case 'm&sup2;': result = result * 10.7639; break;
-                    case 'kg': result = result / 2.2; break;
+                    case 'm²': result = result * 10.7639; break;
+                    case 'kg': result = result * 2.2; break;
                 }
                 
                 return result;
@@ -303,8 +292,8 @@
 
                 switch (unit) {
                     case 'gal': result = result * 3.79; break;
-                    case 'ft&sup2;': result = result / 10.7639; break;
-                    case 'lb': result = result * 2.2; break;
+                    case 'ft²': result = result / 10.7639; break;
+                    case 'lb': result = result / 2.2; break;
                 }
 
                 return result;
