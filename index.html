@@ -56,6 +56,20 @@
             line-height: 34px;
         }
 
+        footer {
+            background-color: #191919;
+            color: #8e8e8e;
+            margin-top: 100px;
+        }
+        
+        footer a {
+            color: #F4F6F1;
+        }
+
+        footer a:hover {
+            color:  #99bab3;
+        }
+
     </style>
 </head>
 
@@ -107,6 +121,7 @@
                     <div class="colon">:</div>
                     <div class="col input-right">
                         <div class="input-group">
+                            <i class="fa fa-info-circle tooltip-icon" title="Assuming tank depth of at least 12 inches"></i>
                             <input type="number" class="form-control" name="tank-area" value="1">
                             <div class="input-group-append">
                                 <div class="input-group-text unit">ft&sup2;</div>
@@ -140,6 +155,7 @@
                     <div class="colon">:</div>
                     <div class="col input-right">
                         <div class="input-group">
+                            <i class="fa fa-info-circle tooltip-icon" title="This is an average, the range is 1 pound fish per 5 – 10 gallons"></i>
                             <input type="number" class="form-control" name="tank-volume" value="7.5">
                             <div class="input-group-append">
                                 <div class="input-group-text unit">gal</div>
@@ -164,6 +180,7 @@
                     </div>
                     <div class="col input-left">
                         <div class="input-group">
+                            <i class="fa fa-info-circle tooltip-icon" title="This is a good newbie ratio. Grow bed volume should be at least equal to the volume of the fish tank."></i>
                             <input type="number" class="form-control" name="bed-volume" value="1">
                             <div class="input-group-append">
                                 <div class="input-group-text unit">gal</div>
@@ -197,7 +214,7 @@
                     </div>
                     <div class="col input-left">
                         <div class="input-group">
-                            <i class="fa fa-info-circle tooltip-icon" title="To raise levels to 2ppm"></i>
+                            <i class="fa fa-info-circle tooltip-icon" title="To raise levels of ammonia to 2ppm"></i>
                             <input type="number" class="form-control" name="fish-weight" value="4">
                             <div class="input-group-append">
                                 <div class="input-group-text unit">drops</div>
@@ -221,7 +238,38 @@
             </div>
         </div>
     </div>
-
+    <footer class="page-footer font-small pt-4">
+        <div class="container text-center text-md-left">
+            <div class="row">
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <p>Ratios drawn from Silvya Bernstein's book: Aquaponic Gardening: A Step-By-Step Guide to Raising Vegetables and Fish Together and the label on a Dr. Tim's ammonium chloride bottle. </p>
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5>Useful Links</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://www.theaquaponicsource.com/rules-of-thumb/"> The Aquaponics Source </a>
+                        </li>
+                        <li>
+                            <a href="https://www.reddit.com/r/aquaponics/">Aquaponic subreddit</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5>More Stuff</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://www.youtube.com/channel/UChz2QEbZECEzUih1DiqZTNA">Helpful Youtuber Rob Bob</a>
+                        </li>
+                        <li>
+                            <a href="https://www.ebay.ca/usr/smokymountainaquaponics?_trksid=p2047675.l2559">Great supplier of bell syphons</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
